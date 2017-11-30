@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Prison Sentence Calculator</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+
+<body bgcolor="#e0f7fa">
+	<div class="container">
+		<h2>Prison Sentence Calculator</h2>
+		<form method="POST">
+			<div class="input-field col s12">
+		    	<select name="OFFTYPSB">
+		      		<option value="" disabled selected>Choose type of offense</option>
+		      		<option value="1">Murder</option>
+		      		<option value="2">Manslaughter</option>
+		      		<option value="3">Kidnapping</option>
+		      		<option value="4">Sexual Abuse</option>
+		      		<option value="5">Assault</option>
+		      		<option value="6">Robbery</option>
+		      		<option value="9">Arson</option>
+		      		<option value="10">Drugs (Trafficking, Manufacturing, and Importing)</option>
+		      		<option value="11">Drugs (Communication Facilities)</option>
+		      		<option value="12">Drugs (Simple Possession)</option>
+		      		<option value="13">Firearms (Use, Possession, Trafficking)</option>
+		      		<option value="16">Auto Theft</option>
+		      		<option value="17">Larceny</option>
+		      		<option value="18">Fraud</option>
+		      		<option value="19">Embezzlement</option>
+		      		<option value="20">Forgery/Counterfeiting</option>
+		      		<option value="21">Bribery</option>
+		      		<option value="22">Tax Offenses</option>
+		      		<option value="23">Money Laundering</option>
+		      		<option value="24">Racketeering/Extortion</option>
+		      		<option value="25">Gambling/Lottery</option>
+		      		<option value="26">Civil Rights Offenses</option>
+		      		<option value="27">Immigration</option>
+		      		<option value="28">Child Pornography</option>
+		      		<option value="29">Prison Offenses</option>
+		      		<option value="30">Administration of Justice</option>
+		      		<option value="31">Environmental, Game, Fish, and Wildlife Offenses</option>
+		      		<option value="32">National Defense Offenses</option>
+		      		<option value="33">Antitrust Violations</option>
+		      		<option value="34">Food and Drug Offenses</option>
+		      		<option value="35">Traffic Violations and Other Offenses</option>
+		    	</select>
+		    	<label>Type of Criminal Offense</label>
+		  	</div>
+
+		  	<div class="input-field col s12">
+		    	<select name="NEWRACE">
+		      		<option value="" disabled selected>Choose race</option>
+		      		<option value="1">White</option>
+		      		<option value="2">Black</option>
+		      		<option value="3">Hispanic</option>
+		      		<option value="6">Other</option>
+		    	</select>
+		    	<label>Race</label>
+		  	</div>
+
+		  	<div class="input-field col s12">
+		    	<select name="NEWEDUC">
+		      		<option value="" disabled selected>Choose education level</option>
+		      		<option value="1">Less than H.S. Graduate</option>
+		      		<option value="3">H.S. Graduate</option>
+		      		<option value="5">Some College</option>
+		      		<option value="6">College Graduate</option>
+		    	</select>
+		    	<label>Level of Education</label>
+		  	</div>
+
+		  	<div class="input-field col s12">
+		    	<select name="MONSEX">
+		      		<option value="" disabled selected>Choose gender</option>
+		      		<option value="0">Male</option>
+		      		<option value="1">Female</option>
+		    	</select>
+		    	<label>Gender</label>
+		  	</div>
+
+		  	<div class="input-field col s6">
+			    <input placeholder="Age in Years" name="AGE" type="text" class="validate">
+			    <label for="first_name">Age</label>
+	        </div>
+
+	        <div class="input-field col s12">
+		    	<select name="NEWCIT">
+		      		<option value="" disabled selected>Choose citizenship</option>
+		      		<option value="0">U.S. Citizen</option>
+		      		<option value="1">Non-U.S. Citizen</option>
+		    	</select>
+		    	<label>Citizenship</label>
+		  	</div>
+
+		  	<div class="input-field col s12">
+		    	<select name="DISTRICT">
+		      		<option value="" disabled selected>Choose region</option>
+		      		<option value="00">Maine</option>
+		      		<option value="01">Massachusetts</option>
+		      		<option value="02">New Hampshire</option>
+		      		<option value="03">Rhode Island</option>
+		      		<option value="04">Puerto Rico</option>
+		      		<option value="05">Connecticut</option>
+		      		<option value="06">New York North</option>
+		      		<option value="07">New York East</option>
+		      		<option value="08">New York South</option>
+		      		<option value="09">New York West</option>
+		      		<option value="10">Vermont</option>
+		      		<option value="11">Delaware</option>
+		      		<option value="12">New Jersey</option>
+		      		<option value="13">Pennsylvania East</option>
+		      		<option value="14">Pennsylvania Middle</option>
+		      		<option value="15">Pennsylvania West</option>
+		      		<option value="16">Maryland</option>
+		      		<option value="17">North Carolina East</option>
+		      		<option value="18">North Carolina Middle</option>
+		      		<option value="19">North Carolina West</option>
+		      		<option value="20">South Carolina</option>
+		      		<option value="22">Virginia East</option>
+		      		<option value="23">Virginia West</option>
+		      		<option value="24">West Virginia North</option>
+		      		<option value="25">West Virginia South</option>
+		      		<option value="26">Alabama North</option>
+		      		<option value="27">Alabama Middle</option>
+		      		<option value="28">Alabama South</option>
+		      		<option value="29">Florida North</option>
+		      		<option value="30">Florida Middle</option>
+		      		<option value="31">Florida South</option>
+		      		<option value="32">Georgia North</option>
+		      		<option value="33">Georgia Middle</option>
+		      		<option value="34">Georgia South</option>
+		      		<option value="35">Louisiana East</option>
+		      		<option value="36">Louisiana West</option>
+		      		<option value="37">Mississippi North</option>
+		      		<option value="38">Mississippi South</option>
+		      		<option value="39">Texas North</option>
+		      		<option value="40">Texas East</option>
+		      		<option value="41">Texas South</option>
+		      		<option value="42">Texas West</option>
+		      		<option value="43">Kentucky East</option>
+		      		<option value="44">Kentucky West</option>
+		      		<option value="45">Michigan East</option>
+		      		<option value="46">Michigan West</option>
+		      		<option value="47">Ohio North</option>
+		      		<option value="48">Ohio South</option>
+		      		<option value="49">Tennessee East</option>
+		      		<option value="50">Tennessee Middle</option>
+		      		<option value="51">Tennessee West</option>
+		      		<option value="52">Illinois North</option>
+		      		<option value="53">Illinois Central</option>
+		      		<option value="54">Illinois South</option>
+		      		<option value="55">Indiana North</option>
+		      		<option value="56">Indiana South</option>
+		      		<option value="57">Wisconsin East</option>
+		      		<option value="58">Wisconsin West</option>
+		      		<option value="60">Arkansas East</option>
+		      		<option value="61">Arkansas West</option>
+		      		<option value="62">Iowa North</option>
+		      		<option value="63">Iowa South</option>
+		      		<option value="64">Minnesota</option>
+		      		<option value="65">Missouri East</option>
+		      		<option value="66">Missouri West</option>
+		      		<option value="67">Nebraska</option>
+		      		<option value="68">North Dakota</option>
+		      		<option value="69">South Dakota</option>
+		      		<option value="70">Arizona</option>
+		      		<option value="71">California North</option>
+		      		<option value="72">California East</option>
+		      		<option value="73">California Central</option>
+		      		<option value="74">California South</option>
+		      		<option value="75">Hawaii</option>
+		      		<option value="76">Idaho</option>
+		      		<option value="77">Montana</option>
+		      		<option value="78">Nevada</option>
+		      		<option value="79">Oregon</option>
+		      		<option value="80">Washington East</option>
+		      		<option value="81">Washington West</option>
+		      		<option value="82">Colorado</option>
+		      		<option value="83">Kansas</option>
+		      		<option value="84">New Mexico</option>
+		      		<option value="85">Oklahoma North</option>
+		      		<option value="86">Oklahoma East</option>
+		      		<option value="87">OklahomaWest</option>
+		      		<option value="88">Utah</option>
+		      		<option value="89">Wyoming</option>
+		      		<option value="90">District of Columbia</option>
+		      		<option value="91">Virgin Islands</option>
+		      		<option value="93">Guam</option>
+		      		<option value="94">Northern Mariana Islands</option>
+		      		<option value="95">Alaska</option>
+		      		<option value="96">Louisiana Middle</option>
+		    	</select>
+		    	<label>Region</label>
+		  	</div>
+
+		  	<div class="input-field col s12">
+		    	<select name="CRIMHIST">
+		      		<option value="" disabled selected>Choose criminal history</option>
+		      		<option value="0">No Criminal History</option>
+		      		<option value="1">Has Criminal History</option>
+		    	</select>
+		    	<label>Criminal History</label>
+		  	</div>
+
+		  	<div class="center-align">
+		  		<a id="submit-btn" class="waves-effect waves-light btn">Submit</a>
+		  	</div>
+		</form>
+
+		<div>
+			<h4 id="prediction" class="center-align"></h4>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  	<script>
+  		$(document).ready(function() {
+			$('select').material_select();
+		});
+
+		$('#submit-btn').click(function() {
+		    var form_data = new FormData($('form')[0]);
+		    $.ajax({
+		      	type: 'POST',
+		      	url: window.location.href,
+		      	data: form_data,
+		      	contentType: false,
+		      	cache: false,
+		      	processData: false,
+		      	async: false,
+		      	success: function(data) {
+		        	$('#prediction').text('Estimated Prison Sentence: ' + data);
+		      	}
+		    });
+		});
+	</script>
+</body>
+</html>
