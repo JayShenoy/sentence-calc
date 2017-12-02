@@ -20,7 +20,7 @@ def home():
 
 		x = np.array(arr).reshape(1, -1)
 		prediction = model.predict(x)
-		return str(int(prediction[0])) + ' months'
+		return str(round(int(prediction[0]) / 12, 1)) + ' years'
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run()

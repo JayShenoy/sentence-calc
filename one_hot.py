@@ -4,7 +4,7 @@ import numpy as np
 codes = {}
 for i in inputs:
 	if i == 'AGE':
-		break
+		continue
 
 	col = X[:, new_index[i]]
 	# codes contains indices of all possible values for each variable
@@ -26,7 +26,7 @@ def encode(arr):
 
 	for i in inputs:
 		if i == 'AGE':
-			break
+			continue
 
 		col_idx = new_index[i]
 
